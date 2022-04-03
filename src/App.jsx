@@ -1,6 +1,5 @@
 import React from "react";
-import NavBar from "./Components/NavBar/Index.jsx"
-import Counter from "./Components/Counter.jsx"
+import NavBar from "./Components/NavBar/index.jsx";
 import ItemListContainer from "./Components/ItemListContainer/index.jsx";
 
 export default function App() {
@@ -8,9 +7,7 @@ export default function App() {
   return (
     <>
       <NavBar/>
-      <Counter/>
       <ItemListContainer/>
-
     </>
   );
 }

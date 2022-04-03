@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import Icon from '../CartWidget/Index.jsx';
+import CartWidget from '../CartWidget/index.jsx';
 
 
 const pages = ['Products', 'Pricing', 'Blog'];
@@ -96,7 +96,7 @@ export default function NavBar () {
           </Box>
             
           <Box sx={{ flexGrow: 0 }}>
-            <Icon/>
+            <CartWidget/>
           </Box>
         </Toolbar>
       </Container>
