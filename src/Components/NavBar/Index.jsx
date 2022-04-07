@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import CartWidget from '../CartWidget/index.jsx';
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Home', 'Pricing', 'Hola'];
 
 
 export default function NavBar () {

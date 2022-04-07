@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"; 
-import ItemCount from "../ItemCount.jsx";
+import ItemCount from "../ItemCount.jsx/index.jsx";
 import ItemList from "../ItemList/index.jsx";
 import CustomFetch from "../Utils/CustomFetch.jsx";
 import products from "../Utils/Products.jsx";
