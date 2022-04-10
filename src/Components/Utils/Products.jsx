@@ -26,4 +26,4 @@ const products =
   "price": 8654
 }]
 
-export default products
+export default products;

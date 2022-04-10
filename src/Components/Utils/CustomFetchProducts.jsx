@@ -1,4 +1,4 @@
-const CustomFetch = ((time, task) => {
+const CustomFetchProducts = ((time, task) => {
   let condition = true;
   return new Promise((resolve, reject) =>{
     setTimeout(() =>{
@@ -9,4 +9,4 @@ const CustomFetch = ((time, task) => {
     }
   },time)})})
 
-  export default CustomFetch
+  export default CustomFetchProducts
