@@ -8,11 +8,10 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import CartWidget from '../CartWidget/index.jsx';
+import MenuItem from '@mui/material/MenuItem';
+import { Link } from "react-router-dom"
 
-
-const pages = ['Home', 'Pricing', 'Hola'];
 
 
 export default function NavBar () {
@@ -68,11 +67,21 @@ export default function NavBar () {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+            <MenuItem  onClick={handleCloseNavMenu}>
+              <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/">Home</Link></Typography>
+            </MenuItem>
+            <MenuItem  onClick={handleCloseNavMenu}>
+              <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/oilCanvas" >Oil on canvas</Link></Typography>
+            </MenuItem>
+            <MenuItem  onClick={handleCloseNavMenu}>
+              <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/bronze">Bronze</Link></Typography>
+            </MenuItem>
+            <MenuItem  onClick={handleCloseNavMenu}>
+              <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/oilWoods">Oil on woods</Link></Typography>
+            </MenuItem>
+            <MenuItem  onClick={handleCloseNavMenu}>
+              <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/woodblockPrint">Woodblock print</Link> </Typography>
+            </MenuItem>
             </Menu>
           </Box>
           <Typography
@@ -84,17 +93,12 @@ export default function NavBar () {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-            
+            <Link style={{textDecoration:"none"}} to="/"><Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Home</Button></Link>
+            <Link style={{textDecoration:"none"}} to="/category/oilCanvas"><Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Oil on canvas </Button></Link> 
+            <Link style={{textDecoration:"none"}} to="/category/bronze"><Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>bronze</Button></Link>
+            <Link style={{textDecoration:"none"}} to="/category/oilWoods"><Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Oil on woods</Button></Link>
+            <Link style={{textDecoration:"none"}} to="/category/woodblockPrint"><Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Woodblock print</Button></Link>   
+          </Box>  
           <Box sx={{ flexGrow: 0 }}>
             <CartWidget/>
           </Box>
@@ -103,3 +107,5 @@ export default function NavBar () {
     </AppBar>
   );
 };
+
+

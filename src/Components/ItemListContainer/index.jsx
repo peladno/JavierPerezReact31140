@@ -1,28 +1,24 @@
 import React, { useState, useEffect } from "react"; 
-import ItemCount from "../ItemCount.jsx/index.jsx";
 import ItemList from "../ItemList/index.jsx";
-import CustomFetchProducts from "../Utils/CustomFetchProducts.jsx";
+import { CustomFetchProducts } from "../Utils/CustomFetchProducts.jsx";
 import products from "../Utils/Products.jsx";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
   const [item, setItem] = useState ([]);
 
+  const {category} = useParams ();
 
   useEffect (() => {
-    CustomFetchProducts(2000, products)
+    CustomFetchProducts(2000, products, category)
     .then(resultado => setItem(resultado))
     .catch(error =>console.error(error))
 
-  }, []);
-
-  function onAdd (count) {
-    alert('Se agregó ' + count +' productos al carrito')
-  }
+  }, [category]);
 
   return (
     <>
       <div>
-        <ItemCount stock = {5} initial ={1} onAdd = {onAdd}/>
         <ItemList products={item}/>
       </div>
     </>

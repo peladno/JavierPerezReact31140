@@ -10,7 +10,6 @@ export default function App() {
     <>
       <BrowserRouter>
       <NavBar/>
-      <ItemDetailContainer />
       <Routes>
         <Route exact path="/" element= {<ItemListContainer />} />
         <Route exact path="/category/:category" element= {<ItemListContainer />} />

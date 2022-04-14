@@ -39,7 +39,7 @@ const products =
       "length": 1.0
   },
   {   "id": 3,
-      "category": "oilCanvas",   
+      "category": "woodblockPrint",   
       "name": "Dynamic Painting",
       "url": "https://nookipedia.com/wiki/Dynamic_Painting",
       "image_url": "https://dodo.ac/np/images/d/d3/Dynamic_Painting_NH_Icon.png",

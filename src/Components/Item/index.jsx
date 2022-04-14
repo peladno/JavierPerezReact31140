@@ -6,10 +6,9 @@ import Button from '@mui/material/Button';
 import CardActions from '@mui/material/CardActions';
 import { Link } from 'react-router-dom';
 
-export default function Item({id, image_url, name, price, description}) {
+function Item({id, image_url, name, price, description}) {
   return (
     <>
-    
       <Card key={id} sx={{ maxWidth: 275 }}>
         <CardContent>
         <img src={image_url} alt={name}/>
@@ -29,7 +28,8 @@ export default function Item({id, image_url, name, price, description}) {
         </Button>
         </CardActions>
       </Card>
-    
     </>
   );
 }
+
+export default Item;
