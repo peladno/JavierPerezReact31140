@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import Button from "@mui/material/Button"
+import styles from "./index.module.css"
 
 
-function ItemCount({stock, initial, onAdd}) {
+function ItemCount({stock, initial, addCart}) {
   const [ count, setCount] = useState(initial)
 
   function adding() {
@@ -17,13 +19,13 @@ function ItemCount({stock, initial, onAdd}) {
 
   return (
     <>
-      <div>
-        <div>
-          <button variant="contained" onClick={subs}>-</button>
-          <p>{count}</p>
-          <button variant="contained" onClick={adding}>+</button>
+      <div className={styles.buttonContainer}>
+        <div className={styles.buttonContainerCount} >
+          <Button variant="contained" size="small"  onClick={subs}>-</Button>
+          <p className={styles.count}>{count}</p>
+          <Button variant="contained" size="small" onClick={adding}>+</Button>
         </div>
-        <button variant="contained" onClick={() => onAdd(count)}>Agregar al carrito</button>
+        <Button variant="contained" onClick={() => addCart(count)}>Agregar al carrito</Button>
       </div>
     </>
   )

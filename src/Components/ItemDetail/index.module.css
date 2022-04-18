@@ -4,9 +4,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1.2rem;
 }
 
 .itemDetailContainer h3,h4 {
   margin: 0.5rem;
+}
+
+.image {
+  width: 200px;
 }

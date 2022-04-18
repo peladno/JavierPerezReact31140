@@ -23,9 +23,7 @@ function Item({id, image_url, name, price, description}) {
           </Typography>
         </CardContent>
         <CardActions>
-        <Button size="small">
-          <Link to={`/item/${id}`}>Ver producto</Link>
-        </Button>
+          <Link style={{textDecoration:"none"}} to={`/item/${id}`}><Button variant="contained">Ver producto</Button></Link>
         </CardActions>
       </Card>
     </>

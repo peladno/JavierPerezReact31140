@@ -10,7 +10,9 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import CartWidget from '../CartWidget/index.jsx';
 import MenuItem from '@mui/material/MenuItem';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import logo from "../../images/Nook_Inc.png";
+import styles from "./index.module.css";
 
 
 
@@ -35,7 +37,7 @@ export default function NavBar () {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            LOGO
+            <Link to="/"><img className={styles.webLogo} src={logo} alt="logo" /></Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -90,7 +92,7 @@ export default function NavBar () {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            LOGO
+            <Link to="/"><img className={styles.webLogo} src={logo} alt="logo" /></Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <Link style={{textDecoration:"none"}} to="/"><Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Home</Button></Link>

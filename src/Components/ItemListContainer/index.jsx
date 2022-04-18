@@ -3,6 +3,7 @@ import ItemList from "../ItemList/index.jsx";
 import { CustomFetchProducts } from "../Utils/CustomFetchProducts.jsx";
 import products from "../Utils/Products.jsx";
 import { useParams } from "react-router-dom";
+import styles  from "./index.module.css";
 
 const ItemListContainer = () => {
   const [item, setItem] = useState ([]);
@@ -10,7 +11,7 @@ const ItemListContainer = () => {
   const {category} = useParams ();
 
   useEffect (() => {
-    CustomFetchProducts(2000, products, category)
+    CustomFetchProducts(0, products, category)
     .then(resultado => setItem(resultado))
     .catch(error =>console.error(error))
 
@@ -18,7 +19,7 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <div>
+      <div className={styles.itemListContainer}>
         <ItemList products={item}/>
       </div>
     </>
