@@ -6,14 +6,14 @@ import styles from "./index.module.css"
 function ItemCount({stock, initial, addCart}) {
   const [ count, setCount] = useState(initial)
 
-  function adding() {
+  function incrementCount() {
     if (count < stock)
-    setCount(count + 1);
+    setCount(currCount => currCount + 1);
   }
 
-  function subs() {
+  function decrementCount() {
     if (count > 1)
-    setCount(count - 1);
+    setCount(currCount => currCount - 1);
   }
 
 
@@ -21,9 +21,9 @@ function ItemCount({stock, initial, addCart}) {
     <>
       <div className={styles.buttonContainer}>
         <div className={styles.buttonContainerCount} >
-          <Button variant="contained" size="small"  onClick={subs}>-</Button>
+          <Button variant="contained" size="small"  onClick={decrementCount}>-</Button>
           <p className={styles.count}>{count}</p>
-          <Button variant="contained" size="small" onClick={adding}>+</Button>
+          <Button variant="contained" size="small" onClick={incrementCount}>+</Button>
         </div>
         <Button variant="contained" onClick={() => addCart(count)}>Agregar al carrito</Button>
       </div>
