@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
   
   return (
     <div className={styles.itemContainer}> 
-      <ItemDetail {...item}/>
+      <ItemDetail item ={item}/>
     </div>
   )
 }

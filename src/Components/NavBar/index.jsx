@@ -69,21 +69,21 @@ export default function NavBar () {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-            <MenuItem  onClick={handleCloseNavMenu}>
-              <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/">Home</Link></Typography>
-            </MenuItem>
-            <MenuItem  onClick={handleCloseNavMenu}>
-              <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/oilCanvas" >Oil on canvas</Link></Typography>
-            </MenuItem>
-            <MenuItem  onClick={handleCloseNavMenu}>
-              <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/bronze">Bronze</Link></Typography>
-            </MenuItem>
-            <MenuItem  onClick={handleCloseNavMenu}>
-              <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/oilWoods">Oil on woods</Link></Typography>
-            </MenuItem>
-            <MenuItem  onClick={handleCloseNavMenu}>
-              <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/woodblockPrint">Woodblock print</Link> </Typography>
-            </MenuItem>
+              <MenuItem  onClick={handleCloseNavMenu}>
+                <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/">Home</Link></Typography>
+              </MenuItem>
+              <MenuItem  onClick={handleCloseNavMenu}>
+                <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/oilCanvas" >Oil on canvas</Link></Typography>
+              </MenuItem>
+              <MenuItem  onClick={handleCloseNavMenu}>
+                <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/bronze">Bronze</Link></Typography>
+              </MenuItem>
+              <MenuItem  onClick={handleCloseNavMenu}>
+                <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/oilWoods">Oil on woods</Link></Typography>
+              </MenuItem>
+              <MenuItem  onClick={handleCloseNavMenu}>
+                <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/woodblockPrint">Woodblock print</Link> </Typography>
+              </MenuItem>
             </Menu>
           </Box>
           <Typography
