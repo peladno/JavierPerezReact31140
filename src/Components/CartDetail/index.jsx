@@ -9,7 +9,7 @@ const { cart, removeCart, clearCart } = useContext(CartContext);
       {cart.map((item) => (
 
           <div>
-            <img src={item.image_url} />
+            <img src={item.image_url} alt={item.name} />
             <h2>{item.name}</h2>
             <h3>{item.price}</h3>
             <button onClick={()=>removeCart(item.id)}>Remove</button>
