@@ -1,9 +1,9 @@
 import React, { useState , useContext} from 'react';
 import ItemCount from '../ItemCount.jsx';
 import Button from '@mui/material/Button';
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 import { CartContext } from "../CartContext.jsx";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 
 const ItemDetail = ({item}) => {
@@ -20,7 +20,7 @@ const ItemDetail = ({item}) => {
   return (
     <>
         <div className={styles.itemDetailContainer} key={item.id}>
-          <img className={styles.image} src= {item.image_url} alt = {item.name} />
+          <img className={styles.image} src= {item.image_url} alt ={item.name} />
           <h2>{item.name}</h2>
           <h3>${item.price}</h3>
           <h4>Art name: {item.art_name}</h4>
