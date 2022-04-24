@@ -26,7 +26,7 @@ const ItemDetail = ({item}) => {
           <h4>Art name: {item.art_name}</h4>
           <h4>Year: {item.year}</h4>
           <p>{item.description}</p>
-          {number> 0 ?  <Link to={"/cart"}><Button variant="contained">Ir al carrito</Button></Link> : <ItemCount stock = {5} initial ={1} addCart={addCart} /> }
+          {number> 0 ?  <Link to={"/cart"} style={{textDecoration:"none"}}><Button variant="contained">Ir al carrito</Button></Link> : <ItemCount stock = {5} initial ={1} addCart={addCart} /> }
         </div>
     </>
   )
