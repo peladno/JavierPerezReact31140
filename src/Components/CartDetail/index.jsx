@@ -12,20 +12,30 @@ const total = cart.reduce((total, item) => total + item.count * item.price, 0);
 
   return (
     <div className={styles.cartContainer}>
-      {cart.length > 0 ?
-        cart.map((item) => (
-          <div className={styles.cartItem}>
-            <img src={item.image_url} alt={item.name} />
-            <h2>{item.name}</h2>
-            <h3>Cantidad</h3>
-            <p>{item.count}</p>
-            <p>{item.price * item.count}</p>
-            <IconButton><DeleteForeverIcon style={{color: "red"}} onClick={()=>removeCart(item.id)} /></IconButton>
-          </div>
-        )): <p>No hay productos tu carrito</p>}
-      <h3>SubTotal</h3>
-      <p>{total}</p>
-      <Button variant="contained" onClick={clearCart}>Comprar</Button>
+      <div className={styles.cartList}>
+        <h1 className={styles.cartTitle}>Tus productos</h1>
+        {cart.length > 0 ?
+          cart.map((item) => (
+            <div className={styles.cartItem}>
+              <img src={item.image_url} alt={item.name} />
+              <h2>{item.name}</h2>
+              <div>
+                <h3>Cantidad</h3>
+                <p>{item.count}</p>
+              </div>
+              <div>
+                <h3>Precio</h3>
+                <p>$ {item.price * item.count}</p>
+              </div>
+              <IconButton><DeleteForeverIcon style={{color: "red"}} onClick={()=>removeCart(item.id)} /></IconButton>
+            </div>
+          )): <p className={styles.cartNotification}>No hay productos en tu carrito</p>}
+        <div className={styles.cartTotalSection}>
+          <h3>SubTotal</h3>
+          <p>{total}</p>
+          <Button variant="contained" onClick={clearCart}>Comprar</Button>
+        </div>
+      </div>
     </div>
   
 
