@@ -14,7 +14,7 @@ export default function App() {
         <BrowserRouter>
         <NavBar/>
         <Routes>
-          <Route exact path="/JavierPerezReact31140" element= {<ItemListContainer />} />
+          <Route exact path="/" element= {<ItemListContainer />} />
           <Route exact path="/category/:category" element= {<ItemListContainer />} />
           <Route exact path="/item/:id" element= {<ItemDetailContainer />} />
           <Route exact path="/cart" element= {<CartDetail />} />
