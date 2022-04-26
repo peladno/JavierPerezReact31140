@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/JavierPerezReact31140/static/css/main.e183fe97.css",
-    "main.js": "/JavierPerezReact31140/static/js/main.6fca6e1b.js",
+    "main.css": "/JavierPerezReact31140/static/css/main.72b5e0dc.css",
+    "main.js": "/JavierPerezReact31140/static/js/main.882cdc1d.js",
     "static/js/787.98b39981.chunk.js": "/JavierPerezReact31140/static/js/787.98b39981.chunk.js",
     "static/media/background.jpg": "/JavierPerezReact31140/static/media/background.096d27dfdca18fea9542.jpg",
     "static/media/Nook_Inc.png": "/JavierPerezReact31140/static/media/Nook_Inc.900255afd49567b02b25.png",
     "index.html": "/JavierPerezReact31140/index.html",
-    "main.e183fe97.css.map": "/JavierPerezReact31140/static/css/main.e183fe97.css.map",
-    "main.6fca6e1b.js.map": "/JavierPerezReact31140/static/js/main.6fca6e1b.js.map",
+    "main.72b5e0dc.css.map": "/JavierPerezReact31140/static/css/main.72b5e0dc.css.map",
+    "main.882cdc1d.js.map": "/JavierPerezReact31140/static/js/main.882cdc1d.js.map",
     "787.98b39981.chunk.js.map": "/JavierPerezReact31140/static/js/787.98b39981.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e183fe97.css",
-    "static/js/main.6fca6e1b.js"
+    "static/css/main.72b5e0dc.css",
+    "static/js/main.882cdc1d.js"
   ]
 }
