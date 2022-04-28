@@ -16,7 +16,7 @@ const total = cart.reduce((total, item) => total + item.count * item.price, 0);
         <h1 className={styles.cartTitle}>Tus productos</h1>
         {cart.length > 0 ?
           cart.map((item) => (
-            <div className={styles.cartItem}>
+            <div className={styles.cartItem} key={item.id}>
               <img src={item.image_url} alt={item.name} />
               <h2>{item.name}</h2>
               <div>
@@ -27,7 +27,7 @@ const total = cart.reduce((total, item) => total + item.count * item.price, 0);
                 <h3>Precio</h3>
                 <p>$ {item.price * item.count}</p>
               </div>
-              <IconButton><DeleteForeverIcon style={{color: "red"}} onClick={()=>removeCart(item.id)} /></IconButton>
+              <IconButton onClick={()=>removeCart(item.id)}><DeleteForeverIcon style={{color: "red"}} /></IconButton>
             </div>
           )): <p className={styles.cartNotification}>No hay productos en tu carrito</p>}
         <div className={styles.cartTotalSection}>

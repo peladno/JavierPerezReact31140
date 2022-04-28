@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import ItemDetail from "../ItemDetail/index.jsx";
-import { CustomFetchItemDetail } from "../Utils/CustomFetchProducts.jsx";
-import products from '../Utils/Products.jsx';
 import { useParams } from "react-router-dom";
 import styles from "./index.module.css";
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 
 const ItemDetailContainer = () => {
@@ -11,12 +10,19 @@ const ItemDetailContainer = () => {
   const [item, setItem] = useState([]);
   const { id } = useParams()
 
-  useEffect (() => {
-    CustomFetchItemDetail(0, products, id)
-    .then(resultado => setItem(resultado))
-    .catch(error =>console.error(error))
+  useEffect(() => {
+    const db = getFirestore();
 
-  }, [id])
+    const products = doc(db, 'oilCanvas', id);
+
+    getDoc(products)
+    .then((res) => {
+      setItem({ id: res.id, ...res.data() });
+    }).catch((err) => {
+      console.log("error: ", err);
+    });
+
+  }, [id]);
   
   return (
     <div className={styles.itemContainer}> 
