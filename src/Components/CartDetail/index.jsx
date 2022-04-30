@@ -6,8 +6,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 
 const CartDetail = () => {
-const { cart, removeCart, clearCart} = useContext(CartContext); 
-const total = cart.reduce((total, item) => total + item.count * item.price, 0);
+const { cart, removeCart, clearCart, totalPrice} = useContext(CartContext); 
 
 
   return (
@@ -32,7 +31,7 @@ const total = cart.reduce((total, item) => total + item.count * item.price, 0);
           )): <p className={styles.cartNotification}>No hay productos en tu carrito</p>}
         <div className={styles.cartTotalSection}>
           <h3>SubTotal</h3>
-          <p>{total}</p>
+          <p>{totalPrice}</p>
           <Button variant="contained" onClick={clearCart}>Comprar</Button>
         </div>
       </div>
