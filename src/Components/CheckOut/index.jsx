@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function TestFormulario() {
+function CheckOut() {
 
   const [buyer, setBuyer] = useState({
     name: '',
@@ -31,3 +31,5 @@ export default function TestFormulario() {
   );
 
 }
+
+export default CheckOut
