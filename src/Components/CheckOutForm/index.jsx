@@ -1,10 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect} from 'react';
 import { CartContext } from '../CartContext'
-import { addDoc, collection, getFirestore, serverTimestamp } from "firebase/firestore"
+import { addDoc, collection, getFirestore, serverTimestamp, doc, getDoc } from "firebase/firestore"
 
 function CheckOutForm() {
 
-  const { cart, totalCart, clearCart } = useContext(CartContext);
+  const { cart, totalPrice, clearCart } = useContext(CartContext);
 
   const [buyer, setBuyer] = useState({
     name: '',
@@ -26,7 +26,7 @@ function CheckOutForm() {
   const order = {
     buyer: buyer,
     items: cart,
-    total: totalCart,
+    total: totalPrice,
     date: serverTimestamp()
   }
 
@@ -39,6 +39,24 @@ function CheckOutForm() {
       clearCart();
     })
   }
+
+  /*const [item, setItem] = useState("");
+
+  useEffect(() => {
+    const dataBase = getFirestore();
+
+    const products = doc(dataBase, 'orders', 'm7EZiYXADuuBNcOccsii');
+
+    getDoc(products)
+    .then((res) => {
+      setItem({ id: res.id, ...res.data() });
+    }).catch((err) => {
+      console.log("error: ", err);
+    });
+
+  }, []);
+
+  console.log(item)*/
 
   return (
     <div>

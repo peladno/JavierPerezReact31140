@@ -4,9 +4,10 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import styles from "./index.module.css"
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
+import { Link } from "react-router-dom"
 
 const CartDetail = () => {
-const { cart, removeCart, clearCart, totalPrice} = useContext(CartContext); 
+const { cart, removeCart, totalPrice} = useContext(CartContext); 
 
 
   return (
@@ -32,7 +33,7 @@ const { cart, removeCart, clearCart, totalPrice} = useContext(CartContext);
         <div className={styles.cartTotalSection}>
           <h3>SubTotal</h3>
           <p>{totalPrice}</p>
-          <Button variant="contained" onClick={clearCart}>Comprar</Button>
+          <Link to={"/checkOut"} style={{textDecoration:"none"}}><Button variant="contained">Comprar</Button></Link>
         </div>
       </div>
     </div>

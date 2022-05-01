@@ -11,9 +11,9 @@ const ItemDetailContainer = () => {
   const { id } = useParams()
 
   useEffect(() => {
-    const db = getFirestore();
+    const dataBase = getFirestore();
 
-    const products = doc(db, 'oilCanvas', id);
+    const products = doc(dataBase, 'oilCanvas', id);
 
     getDoc(products)
     .then((res) => {
