@@ -1,6 +1,8 @@
 import React, { useState, useContext, useEffect} from 'react';
 import { CartContext } from '../CartContext'
-import { addDoc, collection, getFirestore, serverTimestamp, doc, getDoc } from "firebase/firestore"
+import { addDoc, collection, getFirestore, serverTimestamp, doc, getDoc } from "firebase/firestore";
+import ButtonModal from "../ButtonModal/index"
+
 
 function CheckOutForm() {
 
@@ -21,7 +23,6 @@ function CheckOutForm() {
     })
   }
 
-  console.log(buyer)
 
   const order = {
     buyer: buyer,
@@ -40,12 +41,12 @@ function CheckOutForm() {
     })
   }
 
-  /*const [item, setItem] = useState("");
+  /*const [item, setItem] = useState([]);
 
   useEffect(() => {
     const dataBase = getFirestore();
 
-    const products = doc(dataBase, 'orders', 'm7EZiYXADuuBNcOccsii');
+    const products = doc(dataBase, 'orders', checkoutCode);
 
     getDoc(products)
     .then((res) => {
@@ -54,7 +55,7 @@ function CheckOutForm() {
       console.log("error: ", err);
     });
 
-  }, []);
+  }, [checkoutCode]);
 
   console.log(item)*/
 
@@ -64,7 +65,7 @@ function CheckOutForm() {
         <input name='name' type="text" onChange={handleOnChange} />
         <input name='phone' type="text" onChange={handleOnChange} />
         <input name='email' type="text" onChange={handleOnChange} />
-        <button>Enviar</button>
+        <ButtonModal>Enviar</ButtonModal>
       </form>
       {checkoutCode}
     </div>

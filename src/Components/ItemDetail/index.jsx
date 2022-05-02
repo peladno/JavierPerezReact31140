@@ -17,6 +17,7 @@ const ItemDetail = ({item}) => {
     addToCart({...item, count});
   }
 
+
   return (
     <>
         <div className={styles.itemDetailContainer} key={item.id}>
@@ -26,7 +27,8 @@ const ItemDetail = ({item}) => {
           <h4>Art name: {item.art_name}</h4>
           <h4>Year: {item.year}</h4>
           <p>{item.description}</p>
-          {number> 0 ?  <Link to={"/cart"} style={{textDecoration:"none"}}><Button variant="contained">Ir al carrito</Button></Link> : <ItemCount stock = {5} initial ={1} addCart={addCart} /> }
+          <p>Stock: {item.stock}</p>
+          {number> 0 ?  <Link to={"/cart"} style={{textDecoration:"none"}}><Button variant="contained">Ir al carrito</Button></Link> : <ItemCount stock = {item.stock} initial ={1} addCart={addCart} /> }
         </div>
     </>
   )
