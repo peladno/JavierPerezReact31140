@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import Button from '@mui/material/Button';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+
 
 function ModalForm({ setOpenModal, checkoutCode }) {
 
+  const [itemCheckout, setItemCheckout] = useState([]);
+
+  useEffect(() => {
+    const dataBase = getFirestore();
+
+    const products = doc(dataBase, 'orders', checkoutCode);
+
+    getDoc(products)
+    .then((res) => {
+      setItemCheckout({ id: res.id, ...res.data() });
+    }).catch((err) => {
+      console.log("error: ", err);
+    });
+
+  }, [checkoutCode]);
+
+  console.log(itemCheckout)
 
   return (
     <div className={styles.modalBackground}>
