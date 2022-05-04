@@ -1,24 +1,9 @@
 import React, { useState, useContext, useEffect} from 'react';
 import { CartContext } from '../CartContext'
 import { addDoc, collection, getFirestore, serverTimestamp, doc, getDoc } from "firebase/firestore";
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
 import styles from "./index.module.css";
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
-
+import ModalForm from '../ModalForm/index';
 
 function CheckOutForm() {
 
@@ -66,14 +51,11 @@ function CheckOutForm() {
   }, [checkoutCode]);
 
   console.log(item)*/
-
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div className={styles.formContainer}>
-        <form className={styles.checkoutForm} onSubmit={(e) => { e.preventDefault(); sendOrder() }}>
+        <form className={styles.checkoutForm} onSubmit={(e) => { e.preventDefault(); sendOrder(); setModalOpen(true); }}>
         <h1 className={styles.titleForm}>Checkout</h1>
           <p>Nombre:</p>
           <input type="text" name='name' value={name} onChange={(e) => { setName(e.currentTarget.value) }} required/>
@@ -86,28 +68,13 @@ function CheckOutForm() {
           {
             cart.length === 0? 
             <Button variant="contained" disabled>Enviar</Button> :
-            <Button onClick={handleOpen} type="submit" variant="contained">Enviar</Button>
+            <Button type="submit" variant="contained"
+            >
+              Enviar
+            </Button>
           }
         </form>
-      
-      {
-        checkoutCode === ""? null : 
-        <Modal
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="h2">
-              N° Orden de compra:
-            </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              {checkoutCode}
-            </Typography>
-          </Box>
-        </Modal>
-      }
+        {modalOpen && <ModalForm setOpenModal={setModalOpen} checkoutCode={checkoutCode === ""? <>...Loading</> : checkoutCode}/>}
       
     </div>
   );
