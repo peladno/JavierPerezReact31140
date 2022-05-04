@@ -14,33 +14,35 @@ import { Link } from "react-router-dom";
 import logo from "../../images/Nook_Inc.png";
 import styles from "./index.module.css";
 
+const pages = ["oilCanvas", "bronze", "oilWoods", "woodblockPrint"];
 
-
-export default function NavBar () {
+const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
   return (
-    <AppBar position="static">
+    <AppBar color="primary" position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <Link to="/"><img className={styles.webLogo} src={logo} alt="logo" /></Link>
+            <Link to="/">
+              <img className={styles.webLogo} src={logo} alt="logo" />
+            </Link>
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -55,52 +57,65 @@ export default function NavBar () {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem  onClick={handleCloseNavMenu}>
-                <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/">Home</Link></Typography>
-              </MenuItem>
-              <MenuItem  onClick={handleCloseNavMenu}>
-                <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/oilCanvas" >Oil on canvas</Link></Typography>
-              </MenuItem>
-              <MenuItem  onClick={handleCloseNavMenu}>
-                <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/bronze">Bronze</Link></Typography>
-              </MenuItem>
-              <MenuItem  onClick={handleCloseNavMenu}>
-                <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/oilWoods">Oil on woods</Link></Typography>
-              </MenuItem>
-              <MenuItem  onClick={handleCloseNavMenu}>
-                <Typography textAlign="center"><Link style={{textDecoration:"none"}} to="/category/woodblockPrint">Woodblock print</Link> </Typography>
-              </MenuItem>
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">
+                    <Link
+                      style={{
+                        textDecoration: "none",
+                        color: "black",
+                        textTransform: "uppercase",
+                      }}
+                      to={`/category/${page}`}
+                    >
+                      {page}
+                    </Link>
+                  </Typography>
+                </MenuItem>
+              ))}
             </Menu>
           </Box>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <Link to="/"><img className={styles.webLogo} src={logo} alt="logo" /></Link>
+            <Link to="/">
+              <img className={styles.webLogo} src={logo} alt="logo" />
+            </Link>
+
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Link style={{textDecoration:"none"}} to="/"><Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Home</Button></Link>
-            <Link style={{textDecoration:"none"}} to="/category/oilCanvas"><Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Oil on canvas </Button></Link> 
-            <Link style={{textDecoration:"none"}} to="/category/bronze"><Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>bronze</Button></Link>
-            <Link style={{textDecoration:"none"}} to="/category/oilWoods"><Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Oil on woods</Button></Link>
-            <Link style={{textDecoration:"none"}} to="/category/woodblockPrint"><Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>Woodblock print</Button></Link>   
-          </Box>  
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to={`/category/${page}`}
+                >
+                  {page}
+                </Link>
+              </Button>
+            ))}
+          </Box>
           <Box sx={{ flexGrow: 0 }}>
             <CartWidget/>
           </Box>
@@ -110,4 +125,4 @@ export default function NavBar () {
   );
 };
 
-
+export default NavBar;
