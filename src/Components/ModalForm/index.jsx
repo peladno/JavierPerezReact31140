@@ -23,7 +23,7 @@ function ModalForm({ setOpenModal, checkoutCode }) {
 
   }, [checkoutCode]);
 
-  console.log(itemCheckout)
+  console.log(itemCheckout);
 
   return (
     <div className={styles.modalBackground}>
@@ -43,7 +43,7 @@ function ModalForm({ setOpenModal, checkoutCode }) {
           <h1>Numero de orden:</h1>
         </div>
         <div className={styles.body}>
-          <p>{checkoutCode}</p>
+          <p>{checkoutCode === " "? <>loading...</> : checkoutCode}</p>
         </div>
         <div className={styles.footer}>
         <Link style={{textDecoration:"none"}} to={"/"}>

@@ -1,6 +1,6 @@
-import React, { useState, useContext, useEffect} from 'react';
+import React, { useState, useContext } from 'react';
 import { CartContext } from '../CartContext'
-import { addDoc, collection, getFirestore, serverTimestamp, doc, getDoc } from "firebase/firestore";
+import { addDoc, collection, getFirestore, serverTimestamp } from "firebase/firestore";
 import Button from '@mui/material/Button';
 import styles from "./index.module.css";
 import ModalForm from '../ModalForm/index';
@@ -15,7 +15,7 @@ function CheckOutForm() {
   const [address, setAddress] = useState("");
 
 
-  const [checkoutCode, setCheckoutCode] = useState("");
+  const [checkoutCode, setCheckoutCode] = useState(" ");
   
   const order = {
     buyer: {name: name, phone: phone, email: email, address: address},
@@ -34,23 +34,6 @@ function CheckOutForm() {
     })
   }
 
-  /*const [item, setItem] = useState([]);
-
-  useEffect(() => {
-    const dataBase = getFirestore();
-
-    const products = doc(dataBase, 'orders', checkoutCode);
-
-    getDoc(products)
-    .then((res) => {
-      setItem({ id: res.id, ...res.data() });
-    }).catch((err) => {
-      console.log("error: ", err);
-    });
-
-  }, [checkoutCode]);
-
-  console.log(item)*/
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -74,8 +57,7 @@ function CheckOutForm() {
             </Button>
           }
         </form>
-        {modalOpen && <ModalForm setOpenModal={setModalOpen} checkoutCode={checkoutCode === ""? <>...Loading</> : checkoutCode}/>}
-      
+        {modalOpen && <ModalForm setOpenModal={setModalOpen} checkoutCode={checkoutCode}/>}
     </div>
   );
 
