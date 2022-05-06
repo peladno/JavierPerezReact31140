@@ -40,12 +40,17 @@ function ModalForm({ setOpenModal, checkoutCode }) {
           </Link>
         </div>
         <div className={styles.title}>
-          <h1>Numero de orden:</h1>
+          <h1>Orden de compra</h1>
         </div>
         <div className={styles.body}>
+          <h2 className={styles.checkoutCode}>N° de compra:</h2>
           <p>{checkoutCode === " "? <>loading...</> : checkoutCode}</p>
+          <h3>Resumen:</h3>
+          {itemCheckout?.items?.map((item) =>{
+              return <div className={styles.itemList} key={item.id}> <p>x{item.count}</p><p>{item.art_name}</p> <p>${item.price}</p></div>
+            })}
         </div>
-        <div className={styles.footer}>
+        <div className={styles.footer}> 
         <Link style={{textDecoration:"none"}} to={"/"}>
           <Button variant="contained">
             Home

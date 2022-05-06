@@ -1,7 +1,7 @@
 .modalBackground {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(200, 200, 200, 0.616);
+  background-color: rgba(69, 65, 65, 0.722);
   position: fixed;
   display: flex;
   justify-content: center;
@@ -9,19 +9,24 @@
 }
 
 .modalContainer {
-  width: 25%;
   border-radius: 12px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
   padding: 20px;
+  height: 60%;
+  width: 60%;
 }
 
 .modalContainer .title {
   display: inline-block;
   text-align: center;
   margin-top: 3px;
+}
+
+.modalContainer h1 {
+  font-size:1.4rem;
 }
 
 .titleCloseBtn {
@@ -37,12 +42,9 @@
 }
 
 .modalContainer .body {
-  flex: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   text-align: center;
+  overflow: auto;
 }
 
 .modalContainer .footer {
@@ -51,3 +53,19 @@
   justify-content: center;
   align-items: center;
 }
+
+.itemList {
+  display: flex;
+  flex-direction: row;
+}
+
+.itemList p {
+  width: 33%;
+  font-size: 1.2rem;
+}
+
+.checkoutCode {
+  text-align: center;
+  font-size: 1.4rem;
+}
+

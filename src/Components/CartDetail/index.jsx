@@ -25,7 +25,7 @@ const { cart, removeCart, totalPrice} = useContext(CartContext);
               </div>
               <div>
                 <h3>Precio</h3>
-                <p>$ {item.price * item.count}</p>
+                <p>${item.price * item.count}</p>
               </div>
               <IconButton onClick={()=>removeCart(item.id)}><DeleteForeverIcon style={{color: "red"}} /></IconButton>
             </div>
