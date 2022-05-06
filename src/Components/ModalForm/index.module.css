@@ -16,7 +16,6 @@
   flex-direction: column;
   padding: 20px;
   width: 60vw;
-  height: 60vh;
 }
 
 .modalContainer .title {
@@ -48,7 +47,7 @@
 }
 
 .modalContainer .footer {
-  flex: 10%;
+  flex:20%;
   display: flex;
   justify-content: center;
   align-items: center;
