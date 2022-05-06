@@ -1,6 +1,7 @@
 .buttonContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 
@@ -10,7 +11,20 @@
   justify-content: center;
 }
 
+.buttonContainerCount Button {
+  border-radius: 3rem;
+}
+
 .count {
   padding: 0rem 1.5rem;
+  width: 10px;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0.5rem;
 }
+.addCart {
+  border-radius: 2rem;
+  width: 200px;
+}
+
 

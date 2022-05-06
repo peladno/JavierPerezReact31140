@@ -10,7 +10,7 @@
 
 .cartList {
   background-color: white;
-  width: 70%;
+  width: 80%;
   border-radius: 0.5rem;
 }
 
@@ -27,7 +27,12 @@
   align-items: flex-end;
   margin: 0rem 8rem 1.5rem 8rem;
   border-top: solid rgba(144, 139, 139, 0.215);
+}
 
+.cartTotalSection Button {
+  width: 180px;
+  margin: 0 0 1rem;
+  border-radius: 2rem;
 }
 
 .cartItem {
@@ -41,17 +46,24 @@
 .cartItem div {
   text-align: center;
   padding-right: 5rem;
+  width: 20%;
 }
 
 .cartItem img {
   padding-right: 5rem;
+  width:20%;
 }
 
 .cartItem h2 {
   padding-right: 5rem;
+  width:20%;
 }
 
 .cartItem p {
   color: rgb(144, 139, 139);
   font-size: 1rem;
+}
+
+.cartItem IconButton {
+  width: 10%;
 }

@@ -15,8 +15,8 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  height: 60%;
-  width: 60%;
+  width: 60vw;
+  height: 60vh;
 }
 
 .modalContainer .title {
@@ -48,7 +48,7 @@
 }
 
 .modalContainer .footer {
-  flex: 20%;
+  flex: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,9 +63,3 @@
   width: 33%;
   font-size: 1.2rem;
 }
-
-.checkoutCode {
-  text-align: center;
-  font-size: 1.4rem;
-}
-

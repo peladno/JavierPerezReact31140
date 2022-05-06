@@ -35,8 +35,8 @@ const { cart, removeCart, totalPrice} = useContext(CartContext);
           <p>{totalPrice}</p>
           {cart.length === 0?
           <Button variant="contained" disabled>Comprar</Button> : 
-          <Link to={"/checkOut"} style={{textDecoration:"none"}}><Button variant="contained">Comprar</Button></Link>
-          }
+          <Link to={"/checkOut"} style={{textDecoration:"none"}}><Button variant="contained">Comprar</Button></Link>}
+          <Link to={"/"} style={{textDecoration:"none"}}><Button variant="contained">Seguir Comprando</Button></Link>
         </div>
       </div>
     </div>

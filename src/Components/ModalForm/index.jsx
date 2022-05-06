@@ -3,6 +3,7 @@ import styles from "./index.module.css";
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
+//import ClearIcon from '@mui/icons-material/Clear';
 
 
 function ModalForm({ setOpenModal, checkoutCode }) {
@@ -40,11 +41,10 @@ function ModalForm({ setOpenModal, checkoutCode }) {
           </Link>
         </div>
         <div className={styles.title}>
-          <h1>Orden de compra</h1>
+          <h1>Orden de compra n°: {checkoutCode}</h1>
         </div>
         <div className={styles.body}>
-          <h2 className={styles.checkoutCode}>N° de compra:</h2>
-          <p>{checkoutCode === " "? <>loading...</> : checkoutCode}</p>
+
           <h3>Resumen:</h3>
           {itemCheckout?.items?.map((item) =>{
               return <div className={styles.itemList} key={item.id}> <p>x{item.count}</p><p>{item.art_name}</p> <p>${item.price}</p></div>
