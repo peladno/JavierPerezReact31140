@@ -3,10 +3,14 @@ import styles from "./index.module.css";
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-//import ClearIcon from '@mui/icons-material/Clear';
+import ClearIcon from '@mui/icons-material/Clear';
+import { Waveform } from '@uiball/loaders'
 
 
-function ModalForm({ setOpenModal, checkoutCode }) {
+
+
+
+function ModalForm({ setOpenModal, checkoutCode, loading }) {
 
   const [itemCheckout, setItemCheckout] = useState([]);
 
@@ -24,22 +28,29 @@ function ModalForm({ setOpenModal, checkoutCode }) {
 
   }, [checkoutCode]);
 
-  console.log(itemCheckout);
-
   return (
     <div className={styles.modalBackground}>
       <div className={styles.modalContainer}>
+      {!loading? 
+          <div className={styles.loading}>
+            <Waveform 
+            size={80}
+            lineWeight={3.5}
+            speed={1} 
+            color="black" />
+          </div> :
+      <>
         <div className={styles.titleCloseBtn}>
           <Link to={"/"}>
-            <button
+            <Button
               onClick={() => {
                 setOpenModal(false);
               }}
             >
-              X
-            </button>
+              <ClearIcon/>
+            </Button>
           </Link>
-        </div>
+        </div> 
         <div className={styles.title}>
           <h1>Orden de compra n°: {checkoutCode}</h1>
         </div>
@@ -57,6 +68,9 @@ function ModalForm({ setOpenModal, checkoutCode }) {
           </Button>
         </Link>
         </div>
+      </>
+    }
+        
       </div>
     </div>
   );

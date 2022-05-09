@@ -4,6 +4,9 @@ import { addDoc, collection, getFirestore, serverTimestamp } from "firebase/fire
 import Button from '@mui/material/Button';
 import styles from "./index.module.css";
 import ModalForm from '../ModalForm/index';
+import SendIcon from '@mui/icons-material/Send';
+
+
 
 function CheckOutForm() {
 
@@ -13,6 +16,7 @@ function CheckOutForm() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
+  const [loading, setLoading] = useState(false);
 
 
   const [checkoutCode, setCheckoutCode] = useState(" ");
@@ -31,6 +35,7 @@ function CheckOutForm() {
     addDoc(ordersCollection, order).then(({ id }) => {
       setCheckoutCode(id);
       clearCart();
+      setLoading(true)
     })
   }
 
@@ -48,16 +53,11 @@ function CheckOutForm() {
           <input type="email" name='email' value={email} onChange={(e) => { setEmail(e.currentTarget.value) }} required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="nombre@ejemplo.com" maxLength={200}/>
           <label>Dirección:</label>
           <input type="text" name='address' value={address} onChange={(e) => { setAddress(e.currentTarget.value) }} required maxLength={200}/>
-          {
-            cart.length === 0? 
+          {cart.length === 0? 
             <Button variant="contained" disabled>Enviar</Button> :
-            <Button type="submit" variant="contained"
-            >
-              Enviar
-            </Button>
-          }
+            <Button type="submit" variant="contained"><SendIcon/>Enviar</Button>}
         </form>
-        {modalOpen && <ModalForm setOpenModal={setModalOpen} checkoutCode={checkoutCode}/>}
+        {modalOpen && <ModalForm loading={loading}setOpenModal={setModalOpen} checkoutCode={checkoutCode}/>}
     </div>
   );
 
