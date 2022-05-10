@@ -52,7 +52,9 @@ function ModalForm({ setOpenModal, checkoutCode, loading }) {
           </Link>
         </div> 
         <div className={styles.title}>
-          <h1>Orden de compra n°: {checkoutCode}</h1>
+          <h1>Muchas Gracias por su compra</h1>
+          <h2>Su número de orden de compra es el:</h2>
+          <p>{checkoutCode}</p>
         </div>
         <div className={styles.body}>
 

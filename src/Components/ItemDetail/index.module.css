@@ -7,10 +7,16 @@
   background-color: white;
   padding: 2rem;
   border-radius: 1.2rem;
+  min-height: calc(70vh - 50px);
 }
 
-.itemDetailContainer h3,h4 {
+.itemDetailContainer h2 {
   margin: 0.5rem;
+  font-size: clamp(0.8rem, 2.5vw, 1.1rem); 
+}
+
+.itemDetailContainer p {
+  font-size: clamp(0.5rem, 2.5vw, 1rem); 
 }
 
 .itemDescription {
@@ -19,6 +25,10 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem 2rem;
+}
+
+.itemDescription p {
+  margin-top: 0.8rem;
 }
 
 .itemDetailContainer ItemCount {
@@ -35,8 +45,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem;
 }
 
 .continue {
  padding: 1rem;
+}
+
+.shoppingButtons Button {
+ 
+  border-radius: 3rem;
 }

@@ -5,21 +5,19 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CardActions from '@mui/material/CardActions';
 import { Link } from 'react-router-dom';
+import styles  from "./index.module.css";
 
-function Item({id, image_url, name, price, description}) {
+function Item({id, image_url, name, price}) {
   return (
     <>
-      <Card key={id} sx={{ maxWidth: 275 }}>
+      <Card className={styles.cardItem} sx={{ maxWidth: 275 }} key={id}>
         <CardContent>
-        <img src={image_url} alt={name}/>
+        <img className={styles.imageItem} src={image_url} alt={name}/>
           <Typography variant="h5" component="div">
-            {name}
-          </Typography>
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            {description}
+            <p>{name}</p>
           </Typography>
           <Typography variant="body2">
-            ${price}
+            <p>${price}</p>
           </Typography>
         </CardContent>
         <CardActions>

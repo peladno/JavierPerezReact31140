@@ -23,14 +23,14 @@ const ItemDetail = ({item}) => {
         <div className={styles.itemDetailContainer} key={item.id}>
           <img className={styles.image} src= {item.image_url} alt ={item.name} />
           <div className={styles.itemDescription}>
-            <h2>{item.name}</h2>
-            <h3>${item.price}</h3>
-            <h4>Art name: {item.art_name}</h4>
-            <h4>Year: {item.year}</h4>
+            <h1>{item.name}</h1>
+            <p>Precio: ${item.price}</p>
+            <h2>Art name: {item.art_name}</h2>
+            <h2>Year: {item.year}</h2>
             <p>{item.description}</p>
             <p>Stock: {item.stock}</p>
             <div className={styles.shoppingButtons}>
-              {number> 0 ?  <Link to={"/cart"} style={{textDecoration:"none"}}><Button variant="contained">Ir al carrito</Button></Link> : 
+              {number> 0 ?  <Link to={"/cart"} style={{textDecoration:"none"}}><Button className={styles.carritoButton} variant="contained">Ir al carrito</Button></Link> : 
               <ItemCount stock = {item.stock} initial ={1} addCart={addCart} />}
               <Link className={styles.continue} to={"/"} style={{textDecoration:"none"}}><Button  variant="contained">Seguir Comprando</Button></Link>
             </div>

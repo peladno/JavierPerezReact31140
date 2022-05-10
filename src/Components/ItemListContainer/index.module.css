@@ -1,6 +1,7 @@
 .itemListContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 0.20fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.3fr));
   gap: 2rem;
   padding: 3rem;
+  min-height: calc(100vh - 55px);
 }
