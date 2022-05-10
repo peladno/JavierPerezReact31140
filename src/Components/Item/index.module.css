@@ -1,5 +1,5 @@
 .imageItem {
-  width: 150px;
+  width: 180px;
 }
 
 .cardItem {
@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 410px;
 }
 
 .cardItem p {
@@ -17,4 +16,8 @@
 
 .cardItem Button {
   border-radius: 3rem;
+}
+
+@media screen {
+  
 }

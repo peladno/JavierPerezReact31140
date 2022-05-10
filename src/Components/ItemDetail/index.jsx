@@ -32,7 +32,7 @@ const ItemDetail = ({item}) => {
             <div className={styles.shoppingButtons}>
               {number> 0 ?  <Link to={"/cart"} style={{textDecoration:"none"}}><Button className={styles.carritoButton} variant="contained">Ir al carrito</Button></Link> : 
               <ItemCount stock = {item.stock} initial ={1} addCart={addCart} />}
-              <Link className={styles.continue} to={"/"} style={{textDecoration:"none"}}><Button  variant="contained">Seguir Comprando</Button></Link>
+              <Link className={styles.continue} to={"/"} style={{textDecoration:"none"}}><Button variant="contained">Seguir Comprando</Button></Link>
             </div>
           </div>
         </div>

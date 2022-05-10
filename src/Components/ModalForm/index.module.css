@@ -1,6 +1,6 @@
 .modalBackground {
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   background-color: rgba(69, 65, 65, 0.722);
   position: fixed;
   display: flex;
@@ -17,7 +17,7 @@
   justify-content:space-between;
   padding: 20px;
   width: 60vw;
-  min-height: calc(50vh - 50px);
+  min-height: calc(55vh - 50px);
 }
 
 .modalContainer .title {

@@ -29,11 +29,11 @@ const ItemListContainer = () => {
   }, [category]);
 
   return (
-    <>
       <div className={styles.itemListContainer}>
-        <ItemList products={item}/>
+        <div className={styles.cosas}>
+          <ItemList products={item}/>
+        </div>
       </div>
-    </>
   );
 
   
