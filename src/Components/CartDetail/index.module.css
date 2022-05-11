@@ -1,18 +1,31 @@
 .cartContainer {
   display:flex;
   justify-content: center;
-  margin: 3rem;
-  min-height: calc(70vh - 35px);
+  align-items: center;
+  flex-direction: column;
+  margin: 1.5rem;
+  min-height: calc(75vh - 35px);
+
 }
 
 .cartTitle {
-  margin: 2rem 8rem;
+  font-size: clamp(2rem, 2.5vw, 4rem); 
+  text-align: left;
+  border-bottom: solid rgba(144, 139, 139, 0.215);
+  width:52vw;
+  padding-bottom: 1rem;
+  margin:1rem;
 }
 
 .cartList {
-  background-color: white;
-  width: 80%;
+  background-color: rgb(255, 255, 255);
   border-radius: 0.5rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 0.3fr 1fr 0.2fr;
+  width: 80vw;;
+
 }
 
 .cartNotification {
@@ -25,9 +38,10 @@
 .cartTotalSection {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   margin: 0rem 8rem 1.5rem 8rem;
-  border-top: solid rgba(144, 139, 139, 0.215);
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .cartTotalSection Button {
@@ -40,40 +54,87 @@
   display : flex;
   justify-content:center;
   align-items:center;
-  margin: 0rem 8rem;
-  border-top: solid rgba(144, 139, 139, 0.215);
+  padding: 1rem;
+  border-bottom: solid rgba(144, 139, 139, 0.215);
+  flex-direction: column;
+  width:70vw;
 }
 
-.cartItem div {
+.quantityItem {
   text-align: center;
-  padding-right: 5rem;
-  width: 20%;
+}
+
+.priceItem {
+  text-align: center;
 }
 
 .cartItem img {
-  padding-right: 5rem;
-  width:20%;
+  width:40vw;
 }
 
 .cartItem h2 {
-  padding-right: 5rem;
-  width:20%;
+  text-align: center;
 }
 
 .cartItem p {
   color: rgb(144, 139, 139);
-  font-size: 1rem;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  text-align: center;
+  margin: 0.5rem;
 }
-
-.cartItem IconButton {
-  width: 10%;
+.delete {
+  font-size: 2rem;
+  margin: 1.5rem;
 }
 
 .cartTotalSection h3 { 
   margin-top: 2rem;
+  text-align: center;
 }
 
 .cartTotalSection p {
   margin-top: 1rem;
   margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .cartItem {
+    flex-direction: row; 
+    margin: 0rem 8rem;
+    width:50vw;
+    
+  }
+
+  .cartList {
+    width:70vw;
+  }
+
+  .cartItem img {
+    width: 10vw;
+    margin-right: 1rem;
+  }
+
+  .cartTotalSection {
+    width: 55vw;
+    align-items: flex-end;
+  }
+
+  .cartItem h2 {
+    width: 20%;
+    padding-right: 5rem;
+  }
+
+  .priceItem {
+    padding-right: 5rem;
+    width:10%;
+  }
+
+  .quantityItem {
+    padding-right: 5rem;
+    width:10%;
+  
+  }
+  
+
 }

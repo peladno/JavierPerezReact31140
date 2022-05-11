@@ -23,8 +23,8 @@
   margin: 0.5rem;
 }
 .addCart {
-  border-radius: 2rem;
   width: 200px;
+  border-radius: 3rem !important;
 }
 
 

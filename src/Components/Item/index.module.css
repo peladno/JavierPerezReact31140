@@ -11,13 +11,9 @@
 
 .cardItem p {
   text-align: center;
-  font-size: clamp(0.8rem, 2vw, 1rem)
+  font-size: clamp(1rem, 1vw, 1.2rem);
 }
 
 .cardItem Button {
   border-radius: 3rem;
-}
-
-@media screen {
-  
 }

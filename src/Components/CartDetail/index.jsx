@@ -19,15 +19,15 @@ const { cart, removeCart, totalPrice} = useContext(CartContext);
             <div className={styles.cartItem} key={item.id}>
               <img src={item.image_url} alt={item.name} />
               <h2>{item.name}</h2>
-              <div>
+              <div className={styles.quantityItem}>
                 <h3>Cantidad</h3>
                 <p>{item.count}</p>
               </div>
-              <div>
+              <div className={styles.priceItem}>
                 <h3>Precio</h3>
                 <p>${item.price * item.count}</p>
               </div>
-              <IconButton onClick={()=>removeCart(item.id)}><DeleteForeverIcon style={{color: "red"}} /></IconButton>
+              <IconButton onClick={()=>removeCart(item.id)}><DeleteForeverIcon className={styles.delete} style={{color: "red"}} /></IconButton>
             </div>
           )): <p className={styles.cartNotification}>No hay productos en tu carrito</p>}
         <div className={styles.cartTotalSection}>

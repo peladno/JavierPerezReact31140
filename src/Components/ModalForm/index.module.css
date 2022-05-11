@@ -17,7 +17,7 @@
   justify-content:center;
   padding: 20px;
   width: 60vw;
-  min-height: calc(55vh - 50px);
+  max-height: calc(75vh - 50px);
 
 }
 
