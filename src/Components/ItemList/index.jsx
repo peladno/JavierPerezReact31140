@@ -3,7 +3,8 @@ import Item from '../Item/index.jsx';
 
 function ItemList({products}) {
   return (
-    products.map ((products) => (
+    
+      products.map ((products) => (
       <Item
       id={products.id}
       key={products.id}

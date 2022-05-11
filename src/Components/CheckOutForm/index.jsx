@@ -57,7 +57,7 @@ function CheckOutForm() {
             <Button variant="contained" disabled>Enviar</Button> :
             <Button type="submit" variant="contained"><SendIcon/>Enviar</Button>}
         </form>
-        {modalOpen && <ModalForm loading={loading}setOpenModal={setModalOpen} checkoutCode={checkoutCode}/>}
+        {modalOpen && <ModalForm loading={loading} setOpenModal={setModalOpen} checkoutCode={checkoutCode}/>}
     </div>
   );
 

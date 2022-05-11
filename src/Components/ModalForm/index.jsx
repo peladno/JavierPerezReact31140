@@ -6,10 +6,6 @@ import { getFirestore, doc, getDoc } from "firebase/firestore";
 import ClearIcon from '@mui/icons-material/Clear';
 import { Waveform } from '@uiball/loaders'
 
-
-
-
-
 function ModalForm({ setOpenModal, checkoutCode, loading }) {
 
   const [itemCheckout, setItemCheckout] = useState([]);
@@ -62,6 +58,7 @@ function ModalForm({ setOpenModal, checkoutCode, loading }) {
           {itemCheckout?.items?.map((item) =>{
               return <div className={styles.itemList} key={item.id}> <p>x{item.count}</p><p>{item.art_name}</p> <p>${item.price}</p></div>
             })}
+            <p>Total: ${itemCheckout?.total}</p>
         </div>
         <div className={styles.footer}> 
         <Link style={{textDecoration:"none"}} to={"/"}>

@@ -14,10 +14,11 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content:center;
   padding: 20px;
   width: 60vw;
   min-height: calc(55vh - 50px);
+
 }
 
 .modalContainer .title {
@@ -83,6 +84,7 @@
   width: 33%;
   font-size: clamp(0.8rem, 2.5vw, 1.3rem); 
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .modalContainer .loading {
@@ -90,4 +92,5 @@
   flex-direction: column;
   align-items: center;
   margin:3rem;
+  justify-content: center;
 }

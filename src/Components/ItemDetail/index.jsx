@@ -4,9 +4,10 @@ import Button from '@mui/material/Button';
 import styles from "./index.module.css";
 import { CartContext } from "../CartContext.jsx";
 import { Link } from "react-router-dom";
+import { Waveform } from "@uiball/loaders"
 
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ({item, loading}) => {
 
   const [number, setNumber] = useState(0);
 
@@ -20,7 +21,15 @@ const ItemDetail = ({item}) => {
 
   return (
     <>
-        <div className={styles.itemDetailContainer} key={item.id}>
+      {!loading ?
+        <div className={styles.loadingContainer}>
+          <Waveform className={styles.loading}
+          size={80}
+          lineWeight={3.5}
+          speed={1} 
+          color="black" /> 
+        </div> :
+          <div className={styles.itemDetailContainer} key={item.id}>
           <img className={styles.image} src= {item.image_url} alt ={item.name} />
           <div className={styles.itemDescription}>
             <h1>{item.name}</h1>
@@ -36,6 +45,8 @@ const ItemDetail = ({item}) => {
             </div>
           </div>
         </div>
+      }
+        
     </>
   )
 }

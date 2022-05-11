@@ -8,6 +8,7 @@ import { doc, getDoc, getFirestore } from 'firebase/firestore';
 const ItemDetailContainer = () => {
  
   const [item, setItem] = useState([]);
+  const [loading, setLoading] = useState(false)
   const { id } = useParams()
 
   useEffect(() => {
@@ -18,7 +19,9 @@ const ItemDetailContainer = () => {
     getDoc(products)
     .then((res) => {
       setItem({ id: res.id, ...res.data() });
-    }).catch((err) => {
+      setLoading(true);
+      }
+    ).catch((err) => {
       console.log("error: ", err);
     });
 
@@ -26,7 +29,7 @@ const ItemDetailContainer = () => {
   
   return (
     <div className={styles.itemContainer}> 
-      <ItemDetail item ={item}/>
+      <ItemDetail item ={item} loading={loading}/>
     </div>
   )
 }
