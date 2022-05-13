@@ -48,6 +48,11 @@
   width: 180px;
   margin: 0 0 1rem;
   border-radius: 2rem;
+  background-color:#AF1B3F;
+}
+
+.cartTotalSection Button:hover {
+  background-color:#a84a62;
 }
 
 .cartItem {

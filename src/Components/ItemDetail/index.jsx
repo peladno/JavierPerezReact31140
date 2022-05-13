@@ -39,7 +39,7 @@ const ItemDetail = ({item, loading}) => {
             <p>{item.description}</p>
             <p>Stock: {item.stock}</p>
             <div className={styles.shoppingButtons}>
-              {number> 0 ?  <Link to={"/cart"} style={{textDecoration:"none"}}><Button className={styles.carritoButton} variant="contained">Ir al carrito</Button></Link> : 
+              {number> 0 ?  <Link to={"/cart"} style={{textDecoration:"none"}}><Button className={styles.cartButton} variant="contained">Ir al carrito</Button></Link> : 
               <ItemCount stock = {item.stock} initial ={1} addCart={addCart} />}
               <Link className={styles.continue} to={"/"} style={{textDecoration:"none"}}><Button className={styles.continueButton} variant="contained">Seguir Comprando</Button></Link>
             </div>

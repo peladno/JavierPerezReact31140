@@ -13,7 +13,13 @@
 
 .buttonContainerCount Button {
   border-radius: 3rem;
+  background-color: #AF1B3F;
 }
+
+.buttonContainerCount Button:hover {
+  background-color:#a84a62;
+}
+
 
 .count {
   padding: 0rem 1.5rem;
@@ -22,9 +28,15 @@
   font-size: 1rem;
   margin: 0.5rem;
 }
+
 .addCart {
   width: 200px;
   border-radius: 3rem !important;
+  background-color: #AF1B3F !important;
+}
+
+.addCart:hover {
+  background-color:#a84a62 !important;
 }
 
 

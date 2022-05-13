@@ -69,11 +69,21 @@
 .continueButton {
   width: 200px;
   border-radius: 3rem !important;
+  background-color: #AF1B3F !important;
 }
 
-.carritoButton {
+.continueButton:hover {
+  background-color:#a84a62 !important;
+}
+
+.cartButton {
   width: 200px;
   border-radius: 3rem !important;
+  background-color: #AF1B3F !important;
+}
+
+.cartButton:hover {
+  background-color:#a84a62 !important;
 }
 
 @media (min-width: 1200px) {

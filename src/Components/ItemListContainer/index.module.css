@@ -1,17 +1,20 @@
 .itemListContainer {
   min-height: calc(90vh - 55px);
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
+}
+
+.itemListTitle {
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
 .items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 0.2fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 0.2fr));
   gap: 2rem;
   padding: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .loadingContainer {
@@ -20,13 +23,4 @@
   align-items: center;
   justify-content:center;
   min-height: calc(90vh - 55px);
-}
-
-@media (min-width: 630px) {
-
-  .itemListContainer {
-    display:block;
-  }
-
-
 }

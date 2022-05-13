@@ -45,14 +45,22 @@ function CheckOutForm() {
     <div className={styles.formContainer}>
         <form className={styles.checkoutForm} onSubmit={(e) => { e.preventDefault(); sendOrder(); setModalOpen(true); }}>
         <h1 className={styles.titleForm}>Checkout</h1>
-          <label>Nombre:</label>
-          <input type="text" name='name' value={name} onChange={(e) => { setName(e.currentTarget.value) }} required maxLength={100}/>
-          <label>Telefono:</label>
-          <input type="tel" name='phone' value={phone} onChange={(e) => { setPhone(e.currentTarget.value) }} required title="Solo utilice números" pattern="[0-9]{6,20}" maxLength={30}/>
-          <label>Email:</label>
-          <input type="email" name='email' value={email} onChange={(e) => { setEmail(e.currentTarget.value) }} required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="nombre@ejemplo.com" maxLength={200}/>
-          <label>Dirección:</label>
-          <input type="text" name='address' value={address} onChange={(e) => { setAddress(e.currentTarget.value) }} required maxLength={200}/>
+          <div className={styles.inputGroup}>
+            <input className={styles.input} type="text" name='name' value={name} onChange={(e) => { setName(e.currentTarget.value) }} required maxLength={100}/>
+            <label className={styles.userLabel}>Nombre</label>
+          </div>
+          <div className={styles.inputGroup}>
+            <input className={styles.input} type="tel" name='phone' value={phone} onChange={(e) => { setPhone(e.currentTarget.value) }} required title="Solo utilice números" pattern="[0-9]{6,20}" maxLength={30}/>
+            <label className={styles.userLabel}>Telefono</label>
+          </div>
+          <div className={styles.inputGroup}>
+            <input className={styles.input} type="email" name='email' value={email} onChange={(e) => { setEmail(e.currentTarget.value) }} required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="nombre@ejemplo.com" maxLength={200}/>
+            <label className={styles.userLabel}>Email</label>
+          </div>
+          <div className={styles.inputGroup}>
+            <input className={styles.input} type="text" name='address' value={address} onChange={(e) => { setAddress(e.currentTarget.value) }} required maxLength={200}/>
+            <label className={styles.userLabel}>Dirección</label>
+          </div>
           {cart.length === 0? 
             <Button variant="contained" disabled>Enviar</Button> :
             <Button type="submit" variant="contained"><SendIcon/>Enviar</Button>}

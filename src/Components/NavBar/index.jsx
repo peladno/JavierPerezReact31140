@@ -71,6 +71,20 @@ const NavBar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Link
+                    style={{
+                      textDecoration: "none",
+                      color: "black",
+                      textTransform: "uppercase",
+                    }}
+                    to={"/"}
+                  >
+                    Inicio
+                  </Link>
+                </Typography>
+              </MenuItem>
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
@@ -101,6 +115,17 @@ const NavBar = () => {
 
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to={"/"}
+                >
+                  Inicio
+                </Link>
+              </Button>
             {pages.map((page) => (
               <Button
                 key={page}

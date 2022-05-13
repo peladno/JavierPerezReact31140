@@ -29,7 +29,7 @@
 }
 
 .modalContainer .title p {
-  font-size: clamp(2.5rem, 2.5vw, 2rem); 
+  font-size: clamp(1.2rem, 2.5vw, 2rem); 
   font-weight: bold;
   margin: 1rem;
   padding:0.7rem;

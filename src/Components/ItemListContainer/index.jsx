@@ -33,6 +33,7 @@ const ItemListContainer = () => {
 
   return (
       <div className={styles.itemListContainer}>
+        <h1 className={styles.itemListTitle}>Nuestros productos</h1>
         {!loading ?
         <div className={styles.loadingContainer}>
           <Waveform className={styles.loading}

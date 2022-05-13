@@ -2,7 +2,7 @@ import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import Button from "../Button/index";
 import CardActions from '@mui/material/CardActions';
 import { Link } from 'react-router-dom';
 import styles  from "./index.module.css";
@@ -21,7 +21,7 @@ function Item({id, image_url, name, price}) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Link style={{textDecoration:"none"}} to={`/item/${id}`}><Button variant="contained">Ver producto</Button></Link>
+          <Link style={{textDecoration:"none"}} to={`/item/${id}`}><Button>Ver producto</Button></Link>
         </CardActions>
       </Card>
     </>
