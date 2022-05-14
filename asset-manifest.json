@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.3a4a74a9.css",
-    "main.js": "/static/js/main.f28f5444.js",
+    "main.css": "/static/css/main.309d2109.css",
+    "main.js": "/static/js/main.199473c0.js",
     "static/js/787.98b39981.chunk.js": "/static/js/787.98b39981.chunk.js",
-    "static/media/background.jpg": "/static/media/background.096d27dfdca18fea9542.jpg",
     "static/media/Nook_Inc.png": "/static/media/Nook_Inc.900255afd49567b02b25.png",
     "index.html": "/index.html",
-    "main.3a4a74a9.css.map": "/static/css/main.3a4a74a9.css.map",
-    "main.f28f5444.js.map": "/static/js/main.f28f5444.js.map",
+    "main.309d2109.css.map": "/static/css/main.309d2109.css.map",
+    "main.199473c0.js.map": "/static/js/main.199473c0.js.map",
     "787.98b39981.chunk.js.map": "/static/js/787.98b39981.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a4a74a9.css",
-    "static/js/main.f28f5444.js"
+    "static/css/main.309d2109.css",
+    "static/js/main.199473c0.js"
   ]
 }
