@@ -10,6 +10,7 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-radius: 1rem !important;
+  box-shadow:  7px 7px 14px #969696 !important;
 }
 
 .cardItem p {

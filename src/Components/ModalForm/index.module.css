@@ -76,6 +76,14 @@
   align-items: center;
 }
 
+.homeButton {
+  background-color: #AF1B3F;
+}
+
+.homeButton:hover {
+  background-color:#a84a62;
+}
+
 
 /*Lista de items*/
 .itemList {

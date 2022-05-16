@@ -67,7 +67,7 @@ function ModalForm({ setOpenModal, checkoutCode, loading }) {
         </div>
         <div className={styles.footer}> 
         <Link style={{textDecoration:"none"}} to={"/"}>
-          <Button variant="contained">
+          <Button className={styles.homeButton} variant="contained">
             Home
           </Button>
         </Link>

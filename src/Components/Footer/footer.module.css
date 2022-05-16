@@ -1,10 +1,13 @@
 .footer {
-  background-color: #031926;
+  background: rgb(90,94,92);
+  background: linear-gradient(345deg, rgba(90,94,92,1) 18%, rgba(3,25,38,1) 18%);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   margin-top:auto; 
   padding-top: 2rem;
+
+
 }
 .github {
   color: #FFFF;
@@ -12,11 +15,11 @@
 }
 
 .github:hover {
-  color:rgb(143, 140, 140);
+  color:rgba(3,25,38,1);
 }
 
 .linkedin:hover {
-  color:rgb(143, 140, 140);
+  color:rgba(3,25,38,1);
 }
 
 .linkedin {
