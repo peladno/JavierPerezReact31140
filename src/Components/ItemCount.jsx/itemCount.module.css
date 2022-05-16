@@ -29,6 +29,7 @@
   margin: 0.5rem;
 }
 
+/*Se agregan important por que no me tomaba los estilos*/
 .addCart {
   width: 200px;
   border-radius: 3rem !important;

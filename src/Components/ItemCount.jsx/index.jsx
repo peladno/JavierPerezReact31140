@@ -4,18 +4,19 @@ import styles from "./itemCount.module.css"
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
+//componente de boton contador
 
 function ItemCount({stock, initial, addCart}) {
   const [ count, setCount] = useState(initial)
 
   function incrementCount() {
     if (count < stock)
-    setCount(currCount => currCount + 1);
+    setCount(currentCount => currentCount + 1);
   }
 
   function decrementCount() {
     if (count > 1)
-    setCount(currCount => currCount - 1);
+    setCount(currentCount => currentCount - 1);
   }
 
 

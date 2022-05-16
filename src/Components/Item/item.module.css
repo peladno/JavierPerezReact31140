@@ -2,6 +2,7 @@
   width: 180px;
 }
 
+/*Algunos estilos de tarjeta mas transicion de ellas*/
 .cardItem {
   display: flex;
   flex-direction: column;
@@ -11,7 +12,14 @@
   padding-bottom: 1rem;
   border-radius: 1rem !important;
   box-shadow:  7px 7px 14px #969696 !important;
+  animation: in 700ms ease;
+  animation-fill-mode: backwards;
+  transition: transform .2s; 
 }
+
+  .cardItem:hover {
+    transform:scale(1.04);
+  }
 
 .cardItem p {
   text-align: center;

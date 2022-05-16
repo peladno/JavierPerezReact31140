@@ -12,13 +12,15 @@ function CheckOutForm() {
 
   const { cart, totalPrice, clearCart } = useContext(CartContext);
 
+
+  //estados donde se guardan datos del formulario
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [loading, setLoading] = useState(false);
 
-
+  //estado que guarda id de la compra
   const [checkoutCode, setCheckoutCode] = useState(" ");
   
   const order = {
@@ -28,6 +30,7 @@ function CheckOutForm() {
     date: serverTimestamp()
   }
 
+  //Petición a Firebase de id de aorden de compra
   const sendOrder = () => {
     const dataBase = getFirestore();
     const ordersCollection = collection(dataBase, "orders");
@@ -65,6 +68,7 @@ function CheckOutForm() {
             <Button variant="contained" disabled>Enviar</Button> :
             <Button type="submit" variant="contained"><SendIcon/>Enviar</Button>}
         </form>
+        {/*Modal, se pasan el id a modal por props. Al hacer submit el estado de modal pasa a ser true y se abre */}
         {modalOpen && <ModalForm loading={loading} setOpenModal={setModalOpen} checkoutCode={checkoutCode}/>}
     </div>
   );

@@ -6,7 +6,7 @@ import { CartContext } from "../CartContext.jsx";
 import { Link } from "react-router-dom";
 import { Waveform } from "@uiball/loaders"
 
-
+/*Componente de detalle de productos */
 const ItemDetail = ({item, loading}) => {
 
   const [number, setNumber] = useState(0);

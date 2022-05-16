@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 
 
 export default function CartWidget() {
-
+  //Se trae usContext con total del carrito
   const { totalCart } = useContext(CartContext);
 
   return (

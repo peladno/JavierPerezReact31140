@@ -7,6 +7,8 @@ import CardActions from '@mui/material/CardActions';
 import { Link } from 'react-router-dom';
 import styles  from "./item.module.css";
 
+//tarjeta de cada item, se usó Material UI
+
 function Item({id, image_url, name, price}) {
   return (
     <>

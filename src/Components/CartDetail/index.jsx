@@ -14,6 +14,8 @@ const { cart, removeCart, totalPrice} = useContext(CartContext);
     <div className={styles.cartContainer}>
       <div className={styles.cartList}>
         <h1 className={styles.cartTitle}>Tus productos</h1>
+
+        {/*Mapeo de productos en carrito*/}
         {cart.length > 0 ?
           cart.map((item) => (
             <div className={styles.cartItem} key={item.id}>
@@ -27,12 +29,15 @@ const { cart, removeCart, totalPrice} = useContext(CartContext);
                 <h3>Precio</h3>
                 <p>${item.price * item.count}</p>
               </div>
+              {/*boton aliminar del carrito*/ }
               <IconButton onClick={()=>removeCart(item.id)}><DeleteForeverIcon className={styles.delete} style={{color: "red"}} /></IconButton>
             </div>
           )): <p className={styles.cartNotification}>No hay productos en tu carrito</p>}
         <div className={styles.cartTotalSection}>
           <h3>SubTotal</h3>
           <p>$ {totalPrice}</p>
+
+          {/*Si el carrito esta vacio el boton no se puede utilizar*/}
           {cart.length === 0?
           <Button variant="contained" disabled>Comprar</Button> : 
           <Link to={"/checkOut"} style={{textDecoration:"none"}}><Button variant="contained">Comprar</Button></Link>}

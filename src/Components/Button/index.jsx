@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from "./button.module.css"
 
+//componente botón reutilizable
+
 function Button({children, type, onClick}) {
   return (
     <div>
