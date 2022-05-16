@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { CartContext } from '../CartContext'
 import { addDoc, collection, getFirestore, serverTimestamp } from "firebase/firestore";
 import Button from '@mui/material/Button';
-import styles from "./index.module.css";
+import styles from "./checkoutForm.module.css";
 import ModalForm from '../ModalForm/index';
 import SendIcon from '@mui/icons-material/Send';
 

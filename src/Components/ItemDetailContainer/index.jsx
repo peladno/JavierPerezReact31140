@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import ItemDetail from "../ItemDetail/index.jsx";
 import { useParams } from "react-router-dom";
-import styles from "./index.module.css";
+import styles from "./itemDetailContainer.module.css";
 import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 

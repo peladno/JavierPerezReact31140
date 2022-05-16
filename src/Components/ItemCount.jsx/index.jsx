@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Button from "@mui/material/Button"
-import styles from "./index.module.css"
+import styles from "./itemCount.module.css"
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 

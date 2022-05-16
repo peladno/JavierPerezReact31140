@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { CartContext } from "../CartContext"
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import styles from "./index.module.css"
+import styles from "./cartDetail.module.css"
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { Link } from "react-router-dom"

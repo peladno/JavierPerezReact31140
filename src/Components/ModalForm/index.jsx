@@ -6,8 +6,11 @@ import { getFirestore, doc, getDoc } from "firebase/firestore";
 import ClearIcon from '@mui/icons-material/Clear';
 import { Waveform } from '@uiball/loaders'
 
+
+//Modal que recibe id de items enviados a Firebase
 function ModalForm({ setOpenModal, checkoutCode, loading }) {
 
+  //useEffect que busca los items que se enviaron en la orden de compra
   const [itemCheckout, setItemCheckout] = useState([]);
 
   useEffect(() => {
@@ -25,6 +28,8 @@ function ModalForm({ setOpenModal, checkoutCode, loading }) {
   }, [checkoutCode]);
 
   return (
+    /*Modal que abre un spinner y carga hasta que llegan los productos*/
+    
     <div className={styles.modalBackground}>
       <div className={styles.modalContainer}>
       {!loading? 

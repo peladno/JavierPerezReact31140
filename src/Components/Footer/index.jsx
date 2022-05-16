@@ -1,7 +1,7 @@
 import React from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import styles from './index.module.css'
+import styles from './footer.module.css'
 import CottageIcon from '@mui/icons-material/Cottage';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from "react-router-dom";

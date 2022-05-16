@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from "../Button/index";
 import CardActions from '@mui/material/CardActions';
 import { Link } from 'react-router-dom';
-import styles  from "./index.module.css";
+import styles  from "./item.module.css";
 
 function Item({id, image_url, name, price}) {
   return (

@@ -1,3 +1,4 @@
+/*Modal*/
 .modalBackground {
   width: 100vw;
   height: 110vh;
@@ -75,6 +76,8 @@
   align-items: center;
 }
 
+
+/*Lista de items*/
 .itemList {
   display: flex;
   flex-direction: row;
@@ -86,6 +89,8 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
+
+/*Spinner*/
 
 .modalContainer .loading {
   display: flex;

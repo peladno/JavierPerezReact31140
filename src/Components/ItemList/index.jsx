@@ -1,6 +1,8 @@
 import React from 'react'
 import Item from '../Item/index.jsx';
 
+
+//mapeo de productos
 function ItemList({products}) {
   return (
     

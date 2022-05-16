@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CartContextProvider from "./Components/CartContext.jsx";
 import CheckOutForm from "./Components/CheckOutForm/index.jsx";
 import Footer from "./Components/Footer/index.jsx";
+import Error404 from "./Components/Error404/index.jsx"
 
 export default function App() {
 
@@ -21,6 +22,7 @@ export default function App() {
           <Route exact path="/item/:id" element= {<ItemDetailContainer />} />
           <Route exact path="/cart" element= {<CartDetail />} />
           <Route exact path="/checkOut" element= {<CheckOutForm />} />
+          <Route exact path="/*" element= {<Error404 />} />
         </Routes>
         <Footer />
         </BrowserRouter>

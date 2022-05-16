@@ -14,6 +14,8 @@ import { Link } from "react-router-dom";
 import logo from "../../images/Nook_Inc.png";
 import styles from "./index.module.css";
 
+//NavBar de Materia UI
+
 const pages = ["oilCanvas", "bronze", "oilWoods", "woodblockPrint"];
 
 const NavBar = () => {

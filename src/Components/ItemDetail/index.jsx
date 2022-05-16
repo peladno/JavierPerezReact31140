@@ -1,7 +1,7 @@
 import React, { useState , useContext} from 'react';
 import ItemCount from '../ItemCount.jsx';
 import Button from '@mui/material/Button';
-import styles from "./index.module.css";
+import styles from "./itemDetail.module.css";
 import { CartContext } from "../CartContext.jsx";
 import { Link } from "react-router-dom";
 import { Waveform } from "@uiball/loaders"
