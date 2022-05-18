@@ -1,12 +1,11 @@
-# React E-commerce
+# React E-commerce project
 
-```bash
-  Mini proyecto para curso de React Js de CoderHouse utilizando Firebase como base de datos y React Js para el desarrollo del frontend.
-```
+Mini proyecto para curso de React Js de CoderHouse utilizando Firebase como base de datos y React Js para el desarrollo del frontend.
+
 
 ## Demo
 
-![](src%5Cimages%5CEcommerce.gif)
+![](./src/images/Ecommerce.gif)
 
 ## Tech Stack
 
