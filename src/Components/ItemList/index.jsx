@@ -5,7 +5,6 @@ import Item from '../Item/index.jsx';
 //mapeo de productos
 function ItemList({products}) {
   return (
-    
       products.map ((products) => (
       <Item
       id={products.id}

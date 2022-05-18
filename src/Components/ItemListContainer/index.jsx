@@ -36,7 +36,6 @@ const ItemListContainer = () => {
   return (
       <div className={styles.itemListContainer}>
         <h1 className={styles.itemListTitle}>Nuestros productos</h1>
-
         {/*loading que carga hasta que llegen todos los productos*/}
         {!loading ?
         <div className={styles.loadingContainer}>

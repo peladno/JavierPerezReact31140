@@ -1,38 +1,30 @@
-
 # React E-commerce
 
-Mini proyecto para curso de React Js de CoderHouse utilizando Firebase como base de datos y React Js apara el desarrollo del frontend.
+```bash
+  Mini proyecto para curso de React Js de CoderHouse utilizando Firebase como base de datos y React Js para el desarrollo del frontend.
+```
 
 ## Demo
 
-Insert gif or link to demo
-
+![](src%5Cimages%5CEcommerce.gif)
 
 ## Tech Stack
 
-**Client:** React, Material UI, CSS, React Router DOM
+**Client:** React, Material UI, CSS, React Router DOM, UI Loaders
 
 **Server:** Firebase
-
-## Color Reference
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#031926](https://via.placeholder.com/10/031926?text=+) #031926 |
-| Example Color | ![#CFE8EF](https://via.placeholder.com/10/CFE8EF?text=+) #CFE8EF |
-
 
 ## Deployment
 
 To deploy this project run
 
 ```bash
-  npm run start
+  git clone https://github.com/peladno/JavierPerezReact31140.git
+  npm install
+  npm start
 ```
 
-
-
-## Documentation
+## Documentation of libraries
 
 [React JS](https://reactjs.org/docs/getting-started.html)
 
@@ -42,3 +34,9 @@ To deploy this project run
 
 [Firebase](https://firebase.google.com/docs)
 
+[UiLoaders](https://uiball.com/loaders/)
+
+## Author
+
+* Github: [Peladno](https://github.com/peladno)
+* LinkedIN: [JavierP](https://www.linkedin.com/in/javier-perez-u/) 
