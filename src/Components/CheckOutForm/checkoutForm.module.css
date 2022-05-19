@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60vw;
+  width: 90vw;
   background-color: #ffffff;
   margin: 2.5rem;
   border-radius: 1rem;
@@ -36,7 +36,7 @@
   font-size: 1rem;
   color: #000000;
   transition: border 150ms cubic-bezier(0.4,0,0.2,1);
-  width:35vw;
+  width:60vw;
  }
  
  .userLabel {
@@ -62,11 +62,21 @@
  }
 
  .checkoutForm Button {
-  width: 8vw;
+  width: 100px;
   margin: 3rem;
   background-color: #AF1B3F;
 }
 
 .checkoutForm Button:hover {
   background-color:#a84a62;
+}
+
+@media (min-width: 768px) {
+  .checkoutForm {
+    width:60vw;
+  }
+
+  .input {
+    width: 32vw;
+  }
 }

@@ -17,7 +17,7 @@
   flex-direction: column;
   justify-content:center;
   padding: 20px;
-  width: 60vw;
+  width: 80vw;
   max-height: calc(75vh - 50px);
 
 }
@@ -76,11 +76,11 @@
   align-items: center;
 }
 
-.homeButton {
+.footer Button {
   background-color: #AF1B3F;
 }
 
-.homeButton:hover {
+.footer Button:hover {
   background-color:#a84a62;
 }
 
@@ -106,4 +106,10 @@
   align-items: center;
   margin:3rem;
   justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .modalContainer {
+    width:60vw;
+  }
 }
